@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor0: #FFFFFF;
+    --cor1: #EF8354;
+    --cor2: #8E0808;
+    --cor3: #0B3C49;
+    --cor4: #0F1819;
+
+    --fonte-padrao: 'Roboto', cursive;
+    --fonte-destaque: 'Cormorant Garamond', cursive;
+    --fonte-cabeçalho: 'Marcellus', cursive; 
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 20px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.309);
+    height: 35px; /* Define uma altura fixa menor */
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-center {
+    flex: 1;
+    justify-content: center;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+nav > div > a {
+    display: flex;
+    align-items: center;
+    color: var(--cor0);
+    text-decoration: none;
+    padding: 5px 40px;
+    font-family: var(--fonte-cabeçalho);
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+nav > div > a:hover {
+    background-color: var(--cor4);
+    color: var(--cor0);
+}
+
+.nav-icon-home {
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 25px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    filter: invert(1); /* Troca a cor do ícone para branco */
+    vertical-align: sub; /* Garante que o ícone esteja alinhado ao meio do texto */
+}
+
+.nav-menu {
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 45px;
+    text-align: left;
+    filter: invert(1); /* Troca a cor do ícone para branco */
+    vertical-align: sub; /* Garante que o ícone esteja alinhado ao meio do texto */
+}
+
+
+body {
+        background-image: url('../images/carro_tela_principal.png');
+        background-size: 100% ;
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+        background-position: center; /* Centraliza a imagem */
+        margin: 0;
+        padding: 0;
+        height: 90vh; /* Garante que o body ocupe toda a altura da viewport */
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade do preto */
+    z-index: -1; /* Coloca o filtro na frente da imagem */
+    pointer-events: none; /* Permite interações através do pseudo-elemento */
+}
+
+.hero {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: var(--fonte-destaque);
+    font-size: 88px;
+    line-height: 0.80;
+    margin-bottom: 20px;
+    color: var(--cor1);
+    margin: 150px 15px 25px 50px;
+}
+
+.hero p {
+    font-family: var(--fonte-padrao);
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--cor0);
+    margin: 0px 15px 50px 50px;
+}
+
+.highlight {
+    color: var(--cor1);
+}
+
+nav > img {
+    size: 10px;
+}

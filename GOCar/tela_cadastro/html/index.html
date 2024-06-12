@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="../estilo/style.css">
+
+
+
+
+    <title>GOCar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#"><img src="../images/menu.png" alt="menu" class="nav-menu"></a>
+        </div>
+        <div class="nav-center">
+            <a href="../../tela_principal/html/index.html"><img src="../images/house.png" alt="home" class="nav-icon-home">HOME</a>
+            <a href="../../Tela_Aluguel/teladealguel.html">ALUGUE JÁ</a>
+            <a href="../../Quem_somos/Quem_somos.html">QUEM SOMOS</a>
+        </div>
+        <div class="nav-right">
+            <a href="../../teladelogin/teladelogin.html"><img src="../images/profile.png" alt="profile" class="nav-icon-home">LOGIN</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Cadastro</h2>
+            <form action="processar_cadastro.php" method="post">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+    
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+    
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+    
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+    
+                <label for="preferencia_carro">Preferência de Carro:</label>
+                <select id="preferencia_carro" name="preferencia_carro" required>
+                    <option value="compacto">Compacto</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="caminhonete">Caminhonete</option>
+                    <option value="esportivo">Esportivo</option>
+                </select>
+    
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

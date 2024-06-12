@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCar</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#"><img src="../Tela_Aluguel/images/menu.png" alt="menu" class="nav-menu"></a>
+            <a href="../tela_principal/html/index.html"><img src="../Tela_Aluguel/images/house.png" alt="home" class="nav-icon-home">HOME</a>
+        </div>
+        <div class="nav-center">
+
+            <a href="../Quem_somos/Quem_somos.html">QUEM SOMOS</a>
+        </div>
+        <div class="nav-right">
+            <a href="../teladelogin/teladelogin.html"><img src="../Tela_Aluguel/images/profile.png" alt="profile" class="nav-icon-home">LOGIN/CADASTRE-SE</a>
+        </div>
+    </nav>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção do herói com imagem de fundo e formulário -->
+        <section class="hero">
+            <!-- Contêiner do formulário -->
+            <div class="form-container">
+                <form action="#">
+                    <label for="location">local da retirada:</label>
+                    <input type="text" id="location" placeholder="de onde você quer alugar?">
+
+                    <label for="pickup-date">data e hora da retirada:</label>
+                    <div class="date-time">
+                        <input type="date" id="pickup-date">
+                        <input type="time" id="pickup-time" value="12:00">
+                    </div>
+
+                    <label for="return-date">data e hora da devolução:</label>
+                    <div class="date-time">
+                        <input type="date" id="return-date">
+                        <input type="time" id="return-time" value="12:00">
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="different-return-location">
+                        <label for="different-return-location">Devolver em outra loja</label>
+                    </div>
+
+                    <button type="submit">buscar</button>
+                </form>
+            </div>
+            <!-- Texto sobre a imagem de fundo -->
+            <div class="background-text">
+                <h1>Vai de carro, vai de <span class="gocar">GoCar</span></h1>
+                <p>Tracemos o conforto e a facilidade que você merece para ter a liberdade que você <span class="highlight">precisa!</span></p>
+                <button class="rent-now">alugue já</button>
+            </div>
+            <!-- Imagem de fundo -->
+            <div class="background-image"></div>
+        </section>
+    </main>
+    <script>
+        // Obtém a data atual
+        const hoje = new Date();
+        const dd = String(hoje.getDate()).padStart(2, '0');
+        const mm = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+        const yyyy = hoje.getFullYear();
+        const dataAtual = `${yyyy}-${mm}-${dd}`;
+
+        // Calcula a data de devolução como o dia seguinte
+        const amanha = new Date();
+        amanha.setDate(hoje.getDate() + 1);
+        const ddAmanha = String(amanha.getDate()).padStart(2, '0');
+        const mmAmanha = String(amanha.getMonth() + 1).padStart(2, '0');
+        const yyyyAmanha = amanha.getFullYear();
+        const dataDevolucao = `${yyyyAmanha}-${mmAmanha}-${ddAmanha}`;
+
+        // Define os valores nos campos de data
+        document.getElementById('pickup-date').value = dataAtual;
+        document.getElementById('return-date').value = dataDevolucao;
+    </script>
+</body>
+</html>

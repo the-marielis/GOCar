@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor0: #FFFFFF;
+    --cor1: #EF8354;
+    --cor2: #8E0808;
+    --cor3: #0B3C49;
+    --cor4: #0F1819;
+
+    --fonte-padrao: 'Roboto', cursive;
+    --fonte-destaque: 'Cormorant Garamond', cursive;
+    --fonte-cabecalho: 'Marcellus', cursive;
+}
+
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 20px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.309);
+    height: 35px; /* Define uma altura fixa menor */
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    flex: 1;
+    justify-content: center;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+nav > div > a {
+    display: flex;
+    align-items: center;
+    color: var(--cor0);
+    text-decoration: none;
+    padding: 5px 40px;
+    font-family: var(--fonte-cabecalho);
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+nav > div > a:hover {
+    background-color: var(--cor4);
+    color: var(--cor0);
+}
+
+.nav-icon-home {
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 25px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    filter: invert(1); /* Troca a cor do ícone para branco */
+    vertical-align: sub; /* Garante que o ícone esteja alinhado ao meio do texto */
+}
+
+.nav-menu {
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 45px;
+    text-align: left;
+    filter: invert(1); /* Troca a cor do ícone para branco */
+    vertical-align: sub; /* Garante que o ícone esteja alinhado ao meio do texto */
+}
+
+body {
+    font-family: var(--fonte-padrao); /* Texto padrão */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../teladelogin/images/fundo_tela_login.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    background-color: var(--cor4); /* Fundo de cor de backup */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--cor0); /* Textos padrões */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(142, 8, 8, 0.9); /* Fundo bordô com transparência */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 100px; /* Adiciona espaçamento superior */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.bubble {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #999;
+    transition: 0.2s ease;
+}
+
+input:focus + .bubble,
+input:not(:placeholder-shown) + .bubble {
+    top: 0;
+    left: 10px;
+    transform: translateY(-100%);
+    font-size: 0.8em;
+    color: #4CAF50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 19px;
+    background-color: var(--cor0); /* Fundo dos inputs */
+    color: var(--cor3); /* Textos ocultos */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor1); /* Botões salmão */
+    color: var(--cor3); /* Textos ocultos */
+    border: none;
+    border-radius: 19px; /* Adicionando bordas arredondadas */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center; /* Centraliza o texto */
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor0); /* Mudança de cor no hover */
+    color: var(--cor1); /* Textos destaques no hover */
+}
+
+.forgot-password,
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--cor1); /* Textos destaques */
+    text-decoration: none;
+}
+
+.forgot-password:hover,
+.register-link:hover {
+    text-decoration: underline;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left img {
+    width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 25px;
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    filter: invert(1); /* Troca a cor do ícone para branco */
+    vertical-align: sub; /* Garante que o ícone esteja alinhado ao meio do texto */
+}
+
+.nav-left {
+    font-family: var(--fonte-cabecalho);
+    color: var(--cor0);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.nav-left .home-icon:hover {
+    background-color: var(--cor4);
+    color: var(--cor0);
+}
+
+.background-image {
+    display: flex;
+    justify-content: center; /* Para centralizar horizontalmente */
+    align-items: center; /* Para centralizar verticalmente */
+    width: 40px; /* Usar 100% da largura do contêiner pai */
+    height: 40px; /* Defina a altura desejada para a imagem */
+    background-image: url('../teladelogin/images/icon_carro_map.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    filter: invert(1);
+}
+
+/* Estilo dos campos de entrada */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 19px;
+    background-color: var(--cor0); /* Fundo dos inputs */
+    color: var(--cor3); /* Textos ocultos */
+}
+
+.input-field:focus + .bubble,
+.input-field:not(:placeholder-shown) + .bubble {
+    top: 0;
+    left: 10px;
+    transform: translateY(-100%);
+    font-size: 0.8em;
+    color: #4CAF50;
+    visibility: hidden; /* Torna o texto invisível */
+}

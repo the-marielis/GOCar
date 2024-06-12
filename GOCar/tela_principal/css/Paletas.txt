@@ -1,0 +1,8 @@
+textos destaques: #EF8354
+textos padrões: #FFFFFF
+textos ocultos: #0B3C49
+
+botões salmão: #EF8354
+
+fundo bordô: #8E0808
+fundo destaque: #0F1819

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="../teladelogin/images/house.png" alt="Ícone Home" class="nav-icon-home">
+            <a href="../tela_principal/html/index.html" class="home-icon">HOME</a>
+        </div>
+        <div class="nav-center">
+            <a href="../Tela_Aluguel/teladealguel.html">ALUGUE JÁ</a>
+        </div>
+        <div class="nav-right">
+            <a href="../Quem_somos/Quem_somos.html">QUEM SOMOS</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="background-image">
+            <!-- Insira a imagem desejada como background -->
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="email" class="bubble" id="email-label">Email</label>
+                <input type="email" id="email" name="email" class="input-field" oninput="toggleLabelVisibility('email')" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="bubble" id="password-label">Senha</label>
+                <input type="password" id="password" name="password" class="input-field" oninput="toggleLabelVisibility('password')" required>
+            </div>
+            <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+            <button type="submit">LOGIN</button>
+            <a href="../tela_cadastro/html/index.html" class="register-link">Não é cadastrado? Cadastre-se</a>
+        </form>
+    </div>
+    <script>
+        function toggleLabelVisibility(fieldId) {
+            var label = document.getElementById(fieldId + '-label');
+            var input = document.getElementById(fieldId);
+            if (input.value.length > 0) {
+                label.style.visibility = 'hidden'; // Torna o texto do label invisível
+            } else {
+                label.style.visibility = 'visible'; // Torna o texto do label visível
+            }
+        }
+    </script>
+</body>
+</html>
